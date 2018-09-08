@@ -1,3 +1,3 @@
 export enum Config {
-  port = 3000
+  port = 9999
 }
