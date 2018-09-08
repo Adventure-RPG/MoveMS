@@ -1,8 +1,8 @@
-var express = require('express')
-    , app = express()
-    , port = process.env.PORT || 3000
-    , http = require('http').Server(app)
-    , io = require('socket.io')(http)
+var express = require('express'),
+    app = express(),
+    port = process.env.PORT || 3000,
+    http = require('http').Server(app),
+    io = require('socket.io')(http)
 
 io.on('connection', function(socket){
     socket.on('message', function(msg){

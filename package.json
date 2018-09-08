@@ -8,9 +8,10 @@
     "debugTest": "DEBUG=* mocha test"
   },
   "dependencies": {
-    "express": "^4.15.2",
-    "socket.io": "^2.1.1",
     "chai": "^1.10.0",
-    "mocha": "^2.0.1"
+    "express": "^4.15.2",
+    "mocha": "^2.0.1",
+    "mongoose": "^5.2.13",
+    "socket.io": "^2.1.1"
   }
 }
