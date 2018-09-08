@@ -15,8 +15,8 @@ let testMsg = 'HelloWorld',
     receiver;
 
 
-describe('Chat Events', function(){
-    beforeEach(function(done){
+describe('Chat Events', () => {
+    beforeEach((done) => {
 
         // connect two io clients
         sender = socketIo('http://localhost:3000/', ioOptions);
@@ -26,7 +26,7 @@ describe('Chat Events', function(){
         done()
     });
 
-    afterEach(function(done){
+    afterEach((done) => {
 
         // disconnect io clients after each test
         sender.disconnect();
@@ -34,8 +34,8 @@ describe('Chat Events', function(){
         done();
     });
 
-    describe('Message Events', function(){
-        it('Clients should receive a message when the `message` event is emited.', function(done){
+    describe('Message Events', () => {
+        it('Clients should receive a message when the `message` event is emited.', (done) => {
             sender.emit('message', testMsg)
             receiver.on('message', function(msg){
                 chai.expect(msg).to.equal(testMsg);
