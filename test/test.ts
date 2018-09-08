@@ -4,6 +4,7 @@ import * as socketIo from 'socket.io-client';
 import * as app from '../src/index';
 import * as chai from 'chai';
 import {Config} from "../config";
+import Socket = SocketIOClient.Socket;
 
 app;
 
@@ -14,8 +15,8 @@ const ioOptions = {
 };
 
 let testMsg = 'HelloWorld',
-    sender,
-    receiver;
+    sender: Socket,
+    receiver: Socket;
 
 describe('Chat Events', () => {
     beforeEach((done) => {
@@ -39,7 +40,7 @@ describe('Chat Events', () => {
     describe('Message Events', () => {
         it('Clients should receive a message when the `message` event is emited.', (done) => {
             sender.emit('message', testMsg)
-            receiver.on('message', function(msg){
+            receiver.on('message', (msg: string) => {
                 chai.expect(msg).to.equal(testMsg);
                 done();
             })
