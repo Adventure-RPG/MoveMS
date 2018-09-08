@@ -3,6 +3,9 @@ import * as http from "http";
 import * as socketIo from 'socket.io-client';
 import * as app from '../src/index';
 import * as chai from 'chai';
+import {Config} from "../config";
+
+app;
 
 const ioOptions = {
     transports: ['websocket'],
@@ -14,13 +17,12 @@ let testMsg = 'HelloWorld',
     sender,
     receiver;
 
-
 describe('Chat Events', () => {
     beforeEach((done) => {
 
         // connect two io clients
-        sender = socketIo('http://localhost:3000/', ioOptions);
-        receiver = socketIo('http://localhost:3000/', ioOptions);
+        sender = socketIo(`http://localhost:${Config.port}/`, ioOptions);
+        receiver = socketIo(`http://localhost:${Config.port}/`, ioOptions);
 
         // finish beforeEach setup
         done()

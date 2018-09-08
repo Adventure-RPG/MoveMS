@@ -4,7 +4,7 @@ import {Server, createServer} from 'http'
 
 //TODO: вынести port в сеттинги
 const app: express.Application = express();
-const port: string | number = process.env.PORT || 3000;
+const port: string | number = process.env.PORT || 3001;
 const server: Server = createServer(app);
 const io = socketIo(server);
 
