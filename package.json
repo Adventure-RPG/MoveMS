@@ -5,7 +5,10 @@
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.ts",
     "start": "ts-node src/index.ts",
-    "debugTest": "DEBUG=* mocha test"
+    "debugTest": "DEBUG=* mocha test",
+    "precommit": "npm run format:full",
+    "format:full": "prettier --config .prettierrc --write \"src/**/*.ts\"",
+    "format:fix": "pretty-quick --staged"
   },
   "dependencies": {
     "express": "^4.15.2",
@@ -18,6 +21,8 @@
     "@types/mocha": "^5.2.5",
     "@types/socket.io": "^1.4.38",
     "@types/socket.io-client": "^1.4.32",
+    "prettier": "1.13.7",
+    "prettier-tslint": "^0.4.0",
     "socket.io-client": "^2.1.1",
     "chai": "^1.10.0",
     "mocha": "^2.5.3",
