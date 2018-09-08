@@ -4,7 +4,7 @@ import { Server, createServer } from 'http';
 import { Config } from '../config';
 
 const app: express.Application = express();
-const port: string | number = process.env.PORT || Config.port;
+const port: string | number = Config.port || process.env.PORT ;
 const server: Server = createServer(app);
 const io = socketIo(server);
 
