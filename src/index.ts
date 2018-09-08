@@ -16,7 +16,7 @@ io.on('connection', (socket: any) => {
 
 // Set port for listen on server
 server.listen(port, () => {
-    console.log('Running server on port %s', this.port);
+    console.log('Running server on port %s', port);
 });
 
 export { server, io };
