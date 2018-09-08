@@ -1,8 +1,5 @@
 {
     "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended"
-    ],
     "rules": {
         "callable-types": true,
         "class-name": true,
