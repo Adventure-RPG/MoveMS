@@ -9,7 +9,7 @@ const server: Server = createServer(app);
 const io = socketIo(server);
 
 io.on('connection', (socket: any) => {
-  socket.on("message", msg => {
+  socket.on('message', msg => {
     io.sockets.emit('message', msg);
   });
 });
