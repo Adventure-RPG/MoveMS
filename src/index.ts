@@ -16,6 +16,7 @@ io.on('connection', (socket: any) => {
 
 // Set port for listen on server
 server.listen(port, () => {
+  //  TODO: переделать запись в файл для продакшен версии
   console.log('Running server on port %s', port);
 });
 
