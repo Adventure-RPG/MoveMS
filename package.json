@@ -1,0 +1,16 @@
+{
+  "name": "adventure-movement-microservice",
+  "version": "0.0.1",
+  "description": "microservice application for movement",
+  "scripts": {
+    "test": "mocha test",
+    "start": "node index.js",
+    "debugTest": "DEBUG=* mocha test"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.1.1",
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  }
+}
