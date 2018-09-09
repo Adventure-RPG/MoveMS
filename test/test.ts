@@ -5,6 +5,7 @@ import * as chai from 'chai';
 import {Config} from "../config";
 import Socket = SocketIOClient.Socket;
 
+
 const ioOptions = {
     transports: ['websocket'],
     forceNew: true,
