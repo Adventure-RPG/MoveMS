@@ -1,12 +1,9 @@
 'use strict'
 import * as http from "http";
 import * as socketIo from 'socket.io-client';
-import * as app from '../src/index';
 import * as chai from 'chai';
 import {Config} from "../config";
 import Socket = SocketIOClient.Socket;
-
-app;
 
 const ioOptions = {
     transports: ['websocket'],
